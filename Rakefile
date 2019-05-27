@@ -30,7 +30,15 @@ _spec = Hoe.spec 'diff-lcs' do
   extra_dev_deps << ['rdoc', '>= 0']
 end
 
-task :test => :spec
+require "rspec/core/rake_task"
+
+desc "Run all specifications"
+RSpec::Core::RakeTask.new(:spec) do |t|
+  rspec_dirs = %w(spec lib)
+  t.rspec_opts = []
+  t.rspec_opts << "-I#{rspec_dirs.join(":")}" unless rspec_dirs.empty?
+end
+task :default => :spec
 
 if RUBY_VERSION >= '2.0' && RUBY_ENGINE == 'ruby'
   namespace :spec do

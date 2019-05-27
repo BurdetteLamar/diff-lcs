@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib".freeze]
   s.authors = ["Austin Ziegler".freeze]
-  s.date = "2019-01-28"
+  s.date = "2019-05-27"
   s.description = "Diff::LCS computes the difference between two Enumerable sequences using the\nMcIlroy-Hunt longest common subsequence (LCS) algorithm. It includes utilities\nto create a simple HTML diff output format and a standard diff-like tool.\n\nThis is release 1.4, providing a simple extension that allows for\nDiff::LCS::Change objects to be treated implicitly as arrays. Ruby versions\nbelow 2.3 are soft-deprecated.\n\nThis means that older versions are no longer part of the CI test suite. If any\nchanges have been introduced that break those versions, bug reports and patches\nwill be accepted, but it will be up to the reporter to verify any fixes prior\nto release. A future release will completely break compatibility.".freeze
   s.email = ["halostatue@gmail.com".freeze]
   s.executables = ["htmldiff".freeze, "ldiff".freeze]
@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT".freeze, "Artistic-2.0".freeze, "GPL-2.0+".freeze]
   s.rdoc_options = ["--main".freeze, "README.rdoc".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 1.8".freeze)
-  s.rubygems_version = "2.7.7".freeze
+  s.rubygems_version = "3.0.3".freeze
   s.summary = "Diff::LCS computes the difference between two Enumerable sequences using the McIlroy-Hunt longest common subsequence (LCS) algorithm".freeze
 
   if s.respond_to? :specification_version then
@@ -30,20 +30,20 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<hoe-git>.freeze, ["~> 1.6"])
       s.add_development_dependency(%q<hoe-rubygems>.freeze, ["~> 1.0"])
       s.add_development_dependency(%q<hoe-travis>.freeze, ["~> 1.2"])
-      s.add_development_dependency(%q<rspec>.freeze, ["< 4", ">= 2.0"])
-      s.add_development_dependency(%q<rake>.freeze, ["< 12", ">= 10.0"])
+      s.add_development_dependency(%q<rspec>.freeze, [">= 2.0", "< 4"])
+      s.add_development_dependency(%q<rake>.freeze, [">= 10.0", "< 12"])
       s.add_development_dependency(%q<rdoc>.freeze, [">= 0"])
-      s.add_development_dependency(%q<hoe>.freeze, ["~> 3.17"])
+      s.add_development_dependency(%q<hoe>.freeze, ["~> 3.18"])
     else
       s.add_dependency(%q<hoe-doofus>.freeze, ["~> 1.0"])
       s.add_dependency(%q<hoe-gemspec2>.freeze, ["~> 1.1"])
       s.add_dependency(%q<hoe-git>.freeze, ["~> 1.6"])
       s.add_dependency(%q<hoe-rubygems>.freeze, ["~> 1.0"])
       s.add_dependency(%q<hoe-travis>.freeze, ["~> 1.2"])
-      s.add_dependency(%q<rspec>.freeze, ["< 4", ">= 2.0"])
-      s.add_dependency(%q<rake>.freeze, ["< 12", ">= 10.0"])
+      s.add_dependency(%q<rspec>.freeze, [">= 2.0", "< 4"])
+      s.add_dependency(%q<rake>.freeze, [">= 10.0", "< 12"])
       s.add_dependency(%q<rdoc>.freeze, [">= 0"])
-      s.add_dependency(%q<hoe>.freeze, ["~> 3.17"])
+      s.add_dependency(%q<hoe>.freeze, ["~> 3.18"])
     end
   else
     s.add_dependency(%q<hoe-doofus>.freeze, ["~> 1.0"])
@@ -51,9 +51,9 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<hoe-git>.freeze, ["~> 1.6"])
     s.add_dependency(%q<hoe-rubygems>.freeze, ["~> 1.0"])
     s.add_dependency(%q<hoe-travis>.freeze, ["~> 1.2"])
-    s.add_dependency(%q<rspec>.freeze, ["< 4", ">= 2.0"])
-    s.add_dependency(%q<rake>.freeze, ["< 12", ">= 10.0"])
+    s.add_dependency(%q<rspec>.freeze, [">= 2.0", "< 4"])
+    s.add_dependency(%q<rake>.freeze, [">= 10.0", "< 12"])
     s.add_dependency(%q<rdoc>.freeze, [">= 0"])
-    s.add_dependency(%q<hoe>.freeze, ["~> 3.17"])
+    s.add_dependency(%q<hoe>.freeze, ["~> 3.18"])
   end
 end
